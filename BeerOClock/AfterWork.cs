@@ -76,6 +76,7 @@ namespace BeerOClock
         private static bool IsItBeerOClock()
         {
             var now = DateTime.Now;
+            //TimeZoneInfo.CovertTimeBySystemTimeZoneId(DateTime.Now.ToUniversalTime, destinationTimeZoneId:"W. Europe Standard Time");
             return now.DayOfWeek == DayOfWeek.Friday && now.TimeOfDay >= TimeSpan.FromHours(16.5);
         }
 
