@@ -65,9 +65,9 @@ namespace BeerOClock
 
         private static void IsItTimeToFail()
         {
-            var r = new Random(666);
+            //var r = new Random((int)DateTime.UtcNow.Ticks);
 
-            if (r.Next(1, 100) > 92)
+            if (false)
             {
                 throw new ApplicationException("I'm too drunk. Try later...");
             }
